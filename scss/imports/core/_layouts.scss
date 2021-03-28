@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: $max-width;
+    -webkit-font-smoothing: antialiased;
+    margin: auto;
+    @include text($fz-text, 'pp', $line-height, $text-cl, none);
+    background: $white-cl;
+    position: relative;
+    @include custom-scrollbar(6px, rgb(230, 230, 230), #232323);
+    .mainwrapper {
+        width: 100%;
+        margin: auto;
+    }
+    @include desktop {}
+    @include tablet {}
+    @include mobile {}
+}
+
+#to-top {
+    position: fixed;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: $sub-cl;
+    z-index: 10;
+    font-size: 20px;
+    text-align: center;
+    color: $white-cl;
+    cursor: pointer;
+    @include transition($t);
+    user-select: none;
+}
+
+@media screen and(max-width:425px) {
+    #to-top {
+        bottom: 20px !important;
+    }
+}

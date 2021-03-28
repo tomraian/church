@@ -1,0 +1,108 @@
+.carousel {
+    user-select: none;
+    position: relative;
+    &__item {
+        width: 100vw;
+        height: 100vh;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+        &--text {
+            text-align: center;
+            @include mid();
+            .text--heading {
+                @include text(90px, 'pp', 1, $white-cl, none);
+                font-weight: 400;
+                // letter-spacing: 3px;
+                &.bot {
+                    font-weight: 200;
+                    font-size: 70px;
+                    // letter-spacing: 10px;
+                }
+            }
+            .text--desc {
+                padding-top: 15px;
+                text-transform: uppercase !important;
+                @include text(18px, 'pp', $line-height, $white-cl, none);
+                font-weight: 600;
+            }
+            .btn-wrap {
+                padding-top: 30px;
+                a:first-child {
+                    margin-right: -20px;
+                }
+            }
+        }
+    }
+    .important-event {
+        position: absolute;
+        width: 100%;
+        min-height: 25%;
+        background-color: rgba(44, 52, 89, 0.5);
+        bottom: 0;
+        z-index: 2;
+        @include midflex();
+        .important-event-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $white-cl;
+            .wrap-left {
+                display: flex;
+                align-items: center;
+                .event__time {
+                    background-color: $primary-cl;
+                    padding: 15px;
+                    border-radius: 5px;
+                    text-align: center;
+                    margin-right: 20px;
+                    &--day {
+                        font-size: 30px;
+                        font-weight: 600;
+                        line-height: 1;
+                    }
+                }
+                .event__name {
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+            }
+            .event__location {
+                display: flex;
+                i {
+                    color: $sub-cl;
+                    font-size: 35px;
+                    margin-right: 15px;
+                }
+                .event__location--address {
+                    span,
+                    p {
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+                    .address__city {
+                        display: inline-block;
+                        color: $white-cl;
+                        border-bottom: 1px solid $white-cl;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .important-event {
+        min-height: 20%;
+    }
+    .carousel__item--text {
+        width: 100%;
+        .text--heading.top {
+            font-size: 60px;
+        }
+        .text--heading.bot {
+            font-size: 40px;
+        }
+    }
+}

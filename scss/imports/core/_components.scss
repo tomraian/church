@@ -1,0 +1,117 @@
+.btn {
+    display: inline-block;
+    border-radius: 50px;
+    text-transform: uppercase;
+    color: white;
+    @include text(16px, 'pp', inherit, $white-cl, uppercase);
+    cursor: pointer;
+    &.size-s {
+        padding: 8px 22px;
+        font-size: 10px;
+    }
+    &.size-m {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+    &.size-l {
+        padding: 22px 32px;
+    }
+    &.--primary-cl {
+        background-color: $primary-cl;
+        border: none;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @extend .btn;
+            border: transparent;
+            transform: scale(0);
+            transition: 0;
+            border: 3px solid $primary-cl;
+        }
+        &:hover::after {
+            transform: scale(1);
+            transition: 0.4s;
+        }
+        &:active::after {
+            transform: scale(1);
+            transition: 0.4s;
+        }
+        &:hover {
+            color: $primary-cl;
+            background-color: transparent;
+        }
+    }
+    &.--sub-cl {
+        background-color: $sub-cl;
+        border: none;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @extend .btn;
+            border: transparent;
+            transform: scale(0);
+            transition: 0;
+            border: 3px solid $sub-cl;
+        }
+        &:hover::after {
+            transform: scale(1);
+            transition: 0.4s;
+        }
+        &:active::after {
+            transform: scale(1);
+            transition: 0.4s;
+        }
+        &:hover {
+            color: $sub-cl;
+            background-color: transparent;
+        }
+    }
+    &.--white-cl {
+        border: 2px solid $white-cl;
+        position: relative;
+        &::after {
+            content: '';
+            @include fullpage();
+            @extend .btn;
+            transform: scale(0);
+            transition: 0;
+        }
+        &:hover::after {
+            transform: scale(1);
+            transition: 0.4s;
+            border: 2px solid $white-cl;
+        }
+        &:active::after {
+            transform: scale(1);
+            transition: 0.4s;
+            border: 2px solid $white-cl;
+        }
+    }
+}
+
+.no-pd {
+    padding: 0 !important;
+}
+
+.mg-auto {
+    margin: 0 auto;
+}
+
+.active {
+    display: block !important;
+    @include transition($t);
+}
+
+.white-bg {
+    background-color: $white-cl !important;
+}

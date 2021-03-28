@@ -1,0 +1,694 @@
+#home {
+    .contact {
+        padding-top: $pd;
+        &__info {
+            font-size: $fz-text-m;
+            &--heading {
+                @include text($fz-heading-text, 'pp', 1.3, $text-heading-cl, none);
+                font-weight: $fw-heading-text;
+            }
+            &--heading-sub {
+                margin-top: 30px;
+                color: $text-heading-cl;
+                font-weight: bold;
+            }
+            &--desc {
+                font-size: 16px;
+                padding-bottom: 30px;
+            }
+        }
+        .banner {
+            padding: $pd 0;
+            img {
+                width: 100%;
+            }
+            a {
+                position: relative;
+                overflow: hidden;
+                &::before {
+                    content: '';
+                    @include fullpage();
+                    background-color: rgba(0, 0, 0, 0.2);
+                    opacity: 0;
+                }
+                &:hover::before {
+                    opacity: 1;
+                }
+                &::after {
+                    content: '';
+                    @include lightsweep();
+                }
+                &:hover::after {
+                    @include lightsweep-hover();
+                }
+            }
+        }
+    }
+    .services {
+        background-color: $sub-bg-cl;
+        padding: $pd 0;
+        text-align: center;
+        &__heading {
+            @include text($fz-heading-text, 'pp', $line-height, $text-heading-cl, none);
+            font-weight: 600;
+        }
+        &__desc {
+            width: 65%;
+            margin: 0 auto;
+            font-size: $fz-text-m;
+            padding-bottom: 50px;
+        }
+        &__item {
+            padding-bottom: 15px;
+            .item__heading {
+                @include text($fz-text-l, 'pp', $line-height, $text-heading-cl, uppercase);
+                font-weight: 700;
+                padding-bottom: 15px;
+            }
+            .item__img {
+                position: relative;
+                &::before {
+                    content: '';
+                    @include overlay-icon-img();
+                }
+                .icon {
+                    @include mid();
+                    color: $white-cl;
+                    i {
+                        @include icon-arrow();
+                    }
+                }
+            }
+            .item__desc {
+                line-height: 2;
+                padding: 20px 20px 0;
+            }
+            .item__btn {
+                margin-top: 20px;
+            }
+            &:hover .item__heading {
+                color: $sub-cl;
+            }
+            &:hover .item__img::before {
+                @include overlay-icon-img-hover();
+            }
+            &:hover .item__img .icon i {
+                @include icon-arrow-hover();
+            }
+        }
+    }
+    .shop {
+        &__heading {
+            @include text($fz-heading-text, 'pp', 1, $text-heading-cl, none);
+            font-weight: $fw-heading-text;
+            padding-top: $pd;
+        }
+        &__author {
+            color: $sub-cl;
+            font-size: $fz-text-l;
+            font-weight: 500;
+            padding: 40px 0;
+        }
+        &__desc {
+            line-height: 1.8;
+            padding-bottom: 40px;
+            span {
+                font-weight: bold;
+                color: $text-heading-cl;
+            }
+        }
+        &__signature {
+            padding-bottom: 60px;
+            position: relative;
+            img {
+                margin: 0;
+            }
+            span::after {
+                content: '';
+                position: absolute;
+                width: 45%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.2);
+                top: 0;
+                right: 0;
+            }
+        }
+        &__btn {
+            margin-bottom: $pd;
+        }
+    }
+    .sermons {
+        background-image: url('../../../img/sermons/bg_home.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        &-wrap {
+            width: 50%;
+        }
+        &__heading {
+            padding-top: $pd;
+            @include text($fz-heading-text,
+            'pp',
+            $line-height,
+            $sub-cl,
+            none);
+            font-weight: $fw-heading-text;
+        }
+        &__desc {
+            padding: 30px 0 40px 0;
+            @include text(22px,
+            'pp',
+            $line-height,
+            $white-cl,
+            none);
+            font-weight: 600;
+        }
+        &__quote {
+            @include text($fz-text-m,
+            'pp',
+            $line-height,
+            $white-cl,
+            none);
+            font-weight: 500;
+            padding-bottom: $pd;
+        }
+        &__btn {
+            margin-bottom: $pd;
+        }
+    }
+    .last-sermons {
+        padding: $pd 0;
+        text-align: center;
+        &__heading {
+            @include text($fz-heading-text,
+            'pp',
+            $line-height,
+            $text-heading-cl,
+            none);
+            font-weight: $fw-heading-text;
+            padding-bottom: 20px;
+        }
+        &__desc {
+            padding-bottom: 40px;
+        }
+        &__item {
+            padding: 10px 0;
+            &--img {
+                position: relative;
+                &::before {
+                    content: '';
+                    @include overlay-icon-img();
+                }
+                .icon {
+                    @include mid();
+                    color: $white-cl;
+                    i {
+                        @include icon-arrow();
+                    }
+                }
+            }
+            &--learn-option {
+                @include midflex();
+                .learn-option__item {
+                    font-size: 20px;
+                    padding: 15px 10px;
+                    &:hover {
+                        color: $primary-cl;
+                    }
+                }
+            }
+            &--heading-link {
+                font-size: 30px;
+                color: $primary-cl;
+                font-weight: 600;
+                &:hover {
+                    color: $text-heading-cl;
+                }
+            }
+            &--author {
+                padding: 25px 0;
+                font-size: $fz-text-m;
+                span {
+                    color: $primary-cl;
+                }
+            }
+            &--desc {
+                font-size: $fz-text-m;
+            }
+            &:hover .last-sermons__item--author span {
+                color: $sub-cl;
+            }
+            &:hover .last-sermons__item--img::before {
+                @include overlay-icon-img-hover();
+            }
+            &:hover .last-sermons__item--img .icon i {
+                @include icon-arrow-hover();
+            }
+        }
+    }
+    .upcoming-events {
+        display: flex;
+        &__more {
+            background-image: url('../../../img/upcoming-events/bg_events.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 50%;
+            &--heading {
+                @include text($fz-heading-text,
+                'pp',
+                $line-height,
+                $white-cl,
+                none);
+                font-weight: 600;
+                padding-top: $pd;
+                padding-bottom: 60px;
+            }
+            &--item {
+                &-link {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 3px solid rgba(255, 255, 255, 0.2);
+                    margin-bottom: 30px;
+                    .time {
+                        border-right: 3px solid rgba(255, 255, 255, 0.2);
+                        text-align: center;
+                        color: $white-cl;
+                        padding: 10px;
+                        .day {
+                            font-size: 30px;
+                            font-weight: 600;
+                        }
+                    }
+                    .name {
+                        color: $sub-cl;
+                        font-size: 20px;
+                        padding: 10px;
+                    }
+                    .btn {
+                        margin-right: 30px;
+                        &::after,
+                        &::before {
+                            display: none;
+                        }
+                        &:hover {
+                            color: $white-cl;
+                        }
+                    }
+                    &:hover {
+                        border: 3px solid $white-cl;
+                        @include transition($t);
+                    }
+                    &:hover .name {
+                        color: $primary-cl;
+                        @include transition($t);
+                    }
+                    &:hover .btn {
+                        background-color: $sub-cl;
+                        @include transition($t);
+                    }
+                }
+            }
+            &--view {
+                color: $white-cl;
+                font-weight: 500;
+                margin: 70px 0;
+                &:hover {
+                    color: $sub-cl;
+                    @include transition($t);
+                }
+            }
+        }
+        &__register {
+            background-image: url('../../../img/upcoming-events/bg_leadership.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 50%;
+            @include midflex();
+            text-align: center;
+            &--heading {
+                text-align: center;
+                @include text(110px,
+                'pp',
+                $line-height,
+                $white-cl,
+                uppercase);
+                font-weight: $fw-heading-text;
+                line-height: 0.9;
+                padding-bottom: 30px;
+                span {
+                    font-size: 90px;
+                    text-transform: none;
+                    font-weight: normal;
+                    letter-spacing: 5px;
+                }
+            }
+            &--desc {
+                color: $white-cl;
+                padding-bottom: 40px;
+                font-size: $fz-text-l;
+            }
+            &--btn {
+                a:first-child {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    .gallery {
+        display: flex;
+        position: relative;
+        &__info {
+            width: 25%;
+            padding: 50px 40px 20px;
+            &--heading {
+                font-size: 35px;
+                color: $text-heading-cl;
+                font-weight: 600;
+                padding-bottom: 20px;
+            }
+            &--desc {
+                padding-bottom: 40px;
+                font-size: $fz-text-m;
+            }
+            &--view {
+                color: $primary-cl;
+                &:hover {
+                    color: $sub-cl;
+                    @include transition($t);
+                }
+            }
+        }
+        &-wrap {
+            width: 75%;
+            user-select: none;
+            position: relative;
+            // padding-bottom: 20px;
+        }
+        &__img {
+            position: relative;
+            width: calc(100% / 3);
+            height: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+            &--view {
+                background-color: rgba(43, 57, 119, 0.3);
+                @include fullpage();
+                @include midflex();
+                flex-direction: column;
+                padding: 0 60px;
+                text-align: center;
+                @include hidden();
+                .view__heading {
+                    font-size: 20px;
+                    color: $white-cl;
+                    margin-bottom: 30px;
+                    transform: rotate(180deg);
+                }
+                .view__link {
+                    color: $white-cl;
+                    &:hover {
+                        color: $sub-cl;
+                    }
+                }
+            }
+            &:hover .gallery__img--view {
+                @include visible();
+                @include transition($t);
+            }
+            &:hover .gallery__img--view .view__heading {
+                transform: rotate(0deg);
+                transition: 0.2s;
+            }
+        }
+        &__btn {
+            position: absolute;
+            transform: translateY(-50%);
+            color: white;
+            top: 50%;
+            cursor: pointer;
+            i {
+                font-size: 20px;
+                font-weight: $fw-heading-text;
+            }
+            &:hover {
+                color: $sub-cl;
+                @include transition($t);
+            }
+        }
+        &__btn--prev {
+            left: calc(25% + 20px);
+        }
+        &__btn--next {
+            right: calc(0% + 20px);
+        }
+    }
+    .pray {
+        padding: $pd 0;
+        background-color: $sub-bg-cl;
+        text-align: center;
+        &__heading {
+            @include text($fz-heading-text,
+            'pp',
+            $line-height,
+            $text-heading-cl,
+            none);
+            font-weight: $fw-heading-text;
+            padding-bottom: 20px;
+        }
+        &__desc {
+            font-size: $fz-text-m;
+            padding-bottom: 30px;
+        }
+        &__join {
+            font-size: 25px;
+            color: $primary-cl;
+            padding-bottom: 60px;
+            span {
+                color: $text-heading-cl;
+            }
+        }
+    }
+    .sermons-banner {
+        text-align: center;
+        &-wrap {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 0 20px;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            &::before {
+                content: '';
+                @include lightsweep();
+                background-color: rgba(211, 211, 211, 0.3);
+            }
+            &::after {
+                content: '';
+                @include fullpage();
+                background-color: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+            }
+            &:hover::after {
+                opacity: 1;
+            }
+            &:hover::before {
+                @include lightsweep-hover();
+            }
+        }
+        &__item {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            &--img {
+                padding-top: 30px;
+                margin: 0 auto;
+                img {
+                    width: auto;
+                }
+            }
+            &--desc {
+                padding-top: 20px;
+                padding-bottom: 40px;
+                color: $white-cl;
+            }
+            &--btn {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .donations {
+        text-align: center;
+        padding: 100px 0;
+        &__heading {
+            @include text(35px,
+            'pp',
+            $line-height,
+            $text-heading-cl,
+            none);
+            font-weight: $fw-heading-text;
+            padding-bottom: 20px;
+        }
+        &__desc {
+            width: 30%;
+            margin: 0 auto;
+            line-height: 1.8;
+            padding-bottom: 30px;
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    #home {
+        .shop__desc {
+            font-size: 20px;
+        }
+        .upcoming-events__register--heading {
+            font-size: 80px;
+            span {
+                font-size: 60px;
+            }
+        }
+        .upcoming-events__more--view {
+            font-size: $fz-text-l;
+        }
+        .gallery__info--view {
+            font-size: $fz-text-l;
+            text-align: left;
+        }
+        .gallery__info {
+            padding: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    #home {
+        .contact {
+            .banner {
+                padding: 30px 0;
+            }
+            &__info--heading {
+                padding-top: 30px;
+            }
+        }
+        .services {
+            padding: 80px 0;
+            &__item {
+                padding-bottom: 25px;
+            }
+        }
+        .gallery {
+            &__info {
+                width: 40%;
+                text-align: center;
+                padding: $pd-m 10px;
+                &--view {
+                    font-size: 20px;
+                    padding-bottom: 20px;
+                }
+            }
+            &-wrap {
+                width: 60%;
+            }
+            &__img {
+                width: 100%;
+            }
+            &__btn--prev {
+                left: calc(40% + 20px);
+            }
+        }
+        .sermons-banner__item--img {
+            width: 30%;
+            margin: 0 auto;
+        }
+        .sermons-wrap {
+            width: 70%;
+        }
+        .donations__desc {
+            width: 70%;
+        }
+        .upcoming-events__register--heading {
+            font-size: 60px;
+            span {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #home {
+        .upcoming-events {
+            flex-direction: column;
+            &__more,
+            &__register {
+                width: 100%;
+            }
+            .upcoming-events__more--heading {
+                padding-top: 30px;
+            }
+            .upcoming-events__register--heading {
+                padding-top: 30px;
+            }
+            .upcoming-events__register--btn {
+                margin-bottom: 30px;
+            }
+        }
+        .gallery {
+            flex-direction: column;
+            &__info,
+            &-wrap {
+                width: 100%;
+            }
+            &-wrap {
+                height: 360px;
+            }
+            &__img {
+                width: 100%;
+                height: 100%;
+            }
+            &__btn {
+                top: 75%;
+                // transform: translateY(-50%);
+            }
+            &__btn--prev {
+                left: 20px;
+            }
+            &__btn--next {
+                right: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:360px) {
+    #home {
+        .sermons-wrap {
+            width: 100%;
+        }
+        .upcoming-events__register--heading {
+            font-size: 50px;
+        }
+        .upcoming-events__register--btn {
+            display: flex;
+            flex-direction: column;
+            a:first-child {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+        .upcoming-events__more--item-link {
+            .time {
+                padding: 30px 10px;
+            }
+        }
+    }
+}
