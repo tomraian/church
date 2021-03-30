@@ -22,7 +22,6 @@
     &__list {
         padding-left: 50px;
         &-mobile {
-            display: none;
             &--icon {
                 display: none;
                 i {
@@ -39,10 +38,16 @@
                 background-color: #2a2c3b;
                 @include full-fixed();
                 z-index: 999;
+                transform: translateY(-200%);
+                @include transition ($t);
+                &.--active {
+                    transform: translateY(0);
+                    @include transition($t);
+                }
                 .btn-close {
                     display: flex;
                     justify-content: flex-end;
-                    margin: 20px;
+                    margin: 30px 40px 30px 30px;
                     i {
                         font-size: 30px;
                         color: $white-cl;
@@ -55,11 +60,13 @@
                         flex-direction: column;
                         align-items: center;
                         padding: 0 50px;
-                        overflow-y: scroll;
                         li {
                             width: 100%;
                             margin-bottom: 10px;
                             // position: relative;
+                            &.--active>a {
+                                color: $gold-cl;
+                            }
                             a {
                                 display: flex;
                                 justify-content: space-between;
@@ -74,23 +81,27 @@
                                 }
                             }
                             .sub-menu {
-                                padding: 10px 0;
-                                // position: absolute;
+                                padding: 10px;
+                                display: none;
+                                animation: top-to-bot ease $t;
                                 li {
                                     a {
                                         font-size: 15px;
                                         display: flex;
                                         justify-content: space-between;
                                         align-items: center;
-                                        .sub__icon {
-                                            background-color: transparent;
+                                        &.--active {
+                                            color: $gold-cl;
                                         }
                                     }
                                 }
+                                &.--active {
+                                    // transform: translateY(0);
+                                    // @include transition(10s);
+                                    display: block;
+                                    animation: top-to-bot ease $t;
+                                }
                             }
-                        }
-                        li.--active>a {
-                            color: $gold-cl;
                         }
                     }
                 }

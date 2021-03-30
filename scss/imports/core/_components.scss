@@ -28,7 +28,7 @@
             width: 100%;
             height: 100%;
             @extend .btn;
-            border: transparent;
+            // border: transparent;
             transform: scale(0);
             transition: 0;
             border: 3px solid $primary-cl;
@@ -58,7 +58,7 @@
             width: 100%;
             height: 100%;
             @extend .btn;
-            border: transparent;
+            // border: transparent;
             transform: scale(0);
             transition: 0;
             border: 3px solid $sub-cl;
@@ -105,11 +105,6 @@
 
 .mg-auto {
     margin: 0 auto;
-}
-
-.active {
-    display: block !important;
-    @include transition($t);
 }
 
 .white-bg {
