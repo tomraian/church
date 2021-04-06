@@ -126,7 +126,7 @@
                     }
                 }
                 & a.--active {
-                    color: $white-cl !important;
+                    color: $white-cl;
                     background-color: $primary-cl;
                     padding: 4px 20px;
                     border-radius: 50px;
@@ -207,8 +207,7 @@
                                 &:hover {
                                     color: $text-heading-cl;
                                 }
-                                &:hover i {
-                                    transition: color 1s;
+                                &.--active {
                                     color: $text-heading-cl;
                                 }
                             }
