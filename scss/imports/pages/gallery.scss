@@ -1,0 +1,16 @@
+.gallery-show{
+    &__tab{
+        text-align: center;
+        padding-top: 80px;
+        & span{
+            padding: 0 25px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: $text-heading-cl;
+            &:hover{
+                color: $sub-cl;
+            }
+        }
+    }
+}

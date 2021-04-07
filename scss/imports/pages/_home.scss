@@ -514,12 +514,11 @@
         position: relative;
         z-index: 2;
         height: 100%;
+        @include midflex();
+        flex-direction: column;
         &--img {
             padding-top: 30px;
             margin: 0 auto;
-            img {
-                width: auto;
-            }
         }
         &--desc {
             padding-top: 20px;
@@ -608,10 +607,6 @@
         &__btn--prev {
             left: calc(40% + 20px);
         }
-    }
-    .sermons-banner__item--img {
-        width: 30%;
-        margin: 0 auto;
     }
     .sermons-wrap {
         width: 70%;

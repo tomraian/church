@@ -63,22 +63,22 @@
             }
         }
     }
-    &__sidebar{
-        &--heading-item{
+    &__sidebar {
+        &--heading-item {
             padding-bottom: 30px;
             font-size: 22px;
             font-weight: 600;
             color: $text-heading-cl;
         }
-        .search{
+        .search {
             position: relative;
             display: flex;
             margin-bottom: 40px;
-            &:hover .search-icon{
+            &:hover .search-icon {
                 color: $text-heading-cl;
                 @include transition($t);
             }
-            &-icon{
+            &-icon {
                 position: absolute;
                 left: 0;
                 top: 50%;
@@ -86,7 +86,7 @@
                 font-size: 16px;
                 padding-left: 20px;
             }
-            input{
+            input {
                 padding: 15px 15px 15px 50px;
                 color: #121525;
                 border-style: solid;
@@ -100,39 +100,38 @@
                 flex: 1;
                 border-radius: 5px;
                 font-size: $fz-text-m;
-                
             }
         }
-        .recent-sermon{
-            &__list{
+        .recent-sermon {
+            &__list {
                 padding-bottom: 20px;
             }
-            &__item{
+            &__item {
                 display: flex;
                 // max-height: 45px;
-                &--img{
+                &--img {
                     padding-right: 15px;
-                    img{
+                    img {
                         max-height: 60px;
                         width: auto;
                     }
                 }
-                &--info{
+                &--info {
                     padding-bottom: 30px;
-                    .info__heading{
-                        color:$text-heading-cl;
+                    .info__heading {
+                        color: $text-heading-cl;
                         font-weight: 600;
                         padding-bottom: 10px;
-                        &:hover{
+                        &:hover {
                             color: $sub-cl;
                             @include transition($t);
                         }
                     }
-                    .info__time{
+                    .info__time {
                         color: #afb1b8;
                         font-size: 10px;
                         display: inline-block;
-                        &:hover{
+                        &:hover {
                             color: $text-heading-cl;
                             @include transition($t);
                         }
@@ -140,18 +139,18 @@
                 }
             }
         }
-        .category{
+        .category {
             padding-bottom: 20px;
-            &__item{
+            &__item {
                 padding-bottom: 5px;
                 margin-bottom: 10px;
                 font-weight: 600;
                 color: $text-heading-cl;
-                &:hover{
+                &:hover {
                     color: $sub-cl;
                     @include transition($t);
                 }
-                i{
+                i {
                     margin-right: 10px;
                 }
             }

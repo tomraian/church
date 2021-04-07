@@ -1,0 +1,51 @@
+.testimonials{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    &__heading{
+        color: $text-heading-cl;
+        font-size: 35px;
+        font-weight: 600;
+        padding-top: $pd;
+    }
+    &__carousel{
+        &--icon{
+            margin: 35px 0;
+            color: $primary-cl;
+            font-size: 25px;
+        }
+        &--desc{
+            font-size: 22px;
+            color: $text-heading-cl;
+            font-weight: 600;
+            line-height: 1.4;
+            padding-bottom: 45px;
+        }
+        &--people{
+            display: inline-flex;
+            align-items: center;
+            background-color: $sub-bg-cl;
+            padding: 15px 20px;
+            border-radius: 50px;
+            margin-bottom: 50px;
+            .people__avatar{
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                margin-right: 20px;
+            }
+            .people__info{
+                &--name{
+                    color: $text-heading-cl;
+                    font-weight: 600;
+                    font-size: $fz-text-m;
+
+                }
+                &--role{
+                    text-align: left;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+}
