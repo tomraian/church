@@ -117,7 +117,7 @@ $(document).ready(function() {
 function setHeightGallery() {
     let h = $(document).width();
     document.getElementsByClassName('.gallery .gallery-wrap');
-    if (h <= 425) {
+    if (h <= 768) {
         $('.gallery .gallery-wrap').css({ "height": h + "px" });
     }
 }
@@ -149,10 +149,6 @@ $('.testimonials__carousel').flickity({
     resize: true
 
   });
-
-
-
-
 
 
 

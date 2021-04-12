@@ -1,7 +1,7 @@
 .gallery-show{
-    &__tab{
-        text-align: center;
+    &__tab--heading{
         padding-top: 80px;
+        @include midflex();
         & span{
             padding: 0 25px;
             cursor: pointer;
@@ -11,6 +11,13 @@
             &:hover{
                 color: $sub-cl;
             }
+        }
+    }
+    &__tab--show{
+        padding-bottom: 80px;
+        .gallery-item.gallery-page{
+            width: 100%;
+            padding-top: 40px;
         }
     }
 }

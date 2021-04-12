@@ -97,6 +97,22 @@
             border: 2px solid $white-cl;
         }
     }
+    &.--action-primary{
+        background-color: $primary-cl;
+        outline: none;
+        &:hover{
+            background-color: $sub-cl;
+            @include transition($t);
+            outline: none;
+        }
+    }
+    &.--action-sub{
+        background-color: $sub-cl;
+        &:hover{
+            background-color: $primary-cl;
+            @include transition($t);
+        }
+    }
 }
 
 .no-pd {

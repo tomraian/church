@@ -7,7 +7,6 @@
 html,
 body {
     width: 100%;
-    max-width: $max-width;
     -webkit-font-smoothing: antialiased;
     margin: auto;
     @include text($fz-text, 'pp', $line-height, $text-cl, none);

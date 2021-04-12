@@ -1,0 +1,152 @@
+.donations-campaign{
+    text-align: center;
+    &__heading{
+        font-size: 35px;
+        font-weight: $fw-heading-text;
+        color: $text-heading-cl;
+        padding-top: 80px;
+    }
+    &__desc{
+        font-size: $fz-text-m;
+        padding: 40px 0;
+        color: #afb1b8;
+        font-weight: 500;
+    }
+    &__info{
+        text-align: left;
+        &--heading{
+            font-size: 22px;
+            color: $text-heading-cl;
+            font-weight: $fw-heading-text;
+            margin-top: 20px;
+            &:hover{
+                color: $sub-cl;
+                @include transition($t);
+            }
+        }
+        &--donated{
+            .donated-percent{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 15px;
+                font-weight: 500;
+                &__text{
+                    color: $primary-cl;
+                }
+            }
+            .donated-target{
+                margin-top: 15px;
+                font-size: 13px;
+                font-weight: 500;
+                padding-bottom: $pd;
+            }
+        }
+    }
+}
+.join{
+    padding: $pd 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &-text{
+        &__heading{
+            font-size: 60px;
+            color: $sub-cl;
+            line-height: 1.2;
+            padding-bottom: 15px;
+        }
+        &__desc{
+            color: $white-cl;
+            font-weight: 600;
+            font-size: 22px;
+        }
+    }
+    &-subscribe{
+        &__input{
+            display: flex;
+            padding: 0 30px;
+            input{
+                flex: 1;
+                border-radius: 50px;
+                background-color: transparent;
+                border: 3px solid $white-cl;
+                outline: none;
+                color: $white-cl;
+                font-size: $fz-text-m;
+                padding: 0 20px;
+                &::placeholder{
+                    text-transform: uppercase;
+                    color: $white-cl;
+                    font-size: 13px;
+                }
+            }
+            a{
+                margin-left: 20px;
+            }
+        }
+        &__help{
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+            a{
+                margin-left: 10px;
+                color: $sub-cl;
+                &:hover{
+                    color: $primary-cl;
+                    @include transition($t);
+                }
+            }
+        }
+    }
+}
+.donations-package{
+    padding: $pd 0;
+    text-align: center;
+    &__heading{
+        font-size: 30px;
+        color: $text-heading-cl;
+        font-weight: $fw-heading-text;
+        padding-bottom: 15px;
+    }
+    &__desc{
+        font-size: $fz-text-m;
+        padding-bottom: 70px;
+    }
+    &__item{
+        background-color: $sub-bg-cl;
+        text-align: left;
+        padding: 50px 45px;
+        &--heading{
+            color: $text-heading-cl;
+            font-size: 30px;
+            font-weight: $fw-heading-text;
+            margin-bottom: 10px;
+        }
+        &--prices{
+            font-size: $fz-heading-text;
+            color: $sub-cl;
+            font-weight: 500;
+            padding-bottom: 20px;
+        }
+        &--receive{
+            color: $text-heading-cl;
+            font-weight: 500;
+            padding-bottom: 50px;
+            li{
+                margin-bottom: 10px;
+                position: relative;
+                padding-left: 20px;
+                &::before{
+                    content: "\f5bc";
+                    font-family: $fa;
+                    top: 50%;
+                    left: 0px;
+                    transform: translateY(-50%);
+                    position: absolute;
+                    color: $text-heading-cl;
+                }
+            }
+            
+        }
+    }
+}

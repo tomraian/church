@@ -1,0 +1,16 @@
+.blog-wrap{}
+.blog-item{
+    margin-bottom: 80px;
+    &__heading{
+        @include text(35px, 'pp', normal, $text-heading-cl, none);
+        font-weight: $fw-heading-text;
+        margin-top: 40px;
+        &:hover{
+            color: $sub-cl;
+        }
+    }
+    &__desc{
+        margin: 20px 0;
+        line-height: 2;
+    }
+}
