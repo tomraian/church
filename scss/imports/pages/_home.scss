@@ -181,7 +181,7 @@
 }
 
 .last-sermons {
-    padding: $pd 0;
+    padding: $pd 0 90px;
     text-align: center;
     &__heading {
         @include text($fz-heading-text,
@@ -196,7 +196,7 @@
         padding-bottom: 40px;
     }
     &__item {
-        padding: 10px 0;
+        padding: 20px 0;
         &--img {
             position: relative;
             &::before {
@@ -222,7 +222,7 @@
             }
         }
         &--heading-link {
-            font-size: 30px;
+            font-size: 25px;
             color: $primary-cl;
             font-weight: 600;
             &:hover {
@@ -230,14 +230,14 @@
             }
         }
         &--author {
-            padding: 25px 0;
+            padding: 15px 0;
             font-size: $fz-text-m;
             span {
                 color: $primary-cl;
             }
         }
         &--desc {
-            font-size: $fz-text-m;
+            padding: 0 20px;
         }
         &:hover .last-sermons__item--author span {
             color: $sub-cl;

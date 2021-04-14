@@ -8,6 +8,28 @@
         font-weight: 600;
         padding-top: $pd;
     }
+    &__item{
+        width: 100%;
+    }
+    &__dot{
+        padding-bottom: $pd;
+        user-select: none;
+        span{
+            width: 10px;
+            height: 10px;
+            background-color: rgb(175, 175, 175);
+            border: 1px solid  transparent;
+            margin: 2px;
+
+            display: inline-block;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            &:hover{
+            border: 1px solid #6e6e6e;
+            }
+        }
+    }
     &__carousel{
         &--icon{
             margin: 35px 0;
@@ -47,5 +69,16 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .testimonials{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 425px){
+    .testimonials__carousel--desc{
+        font-size: $fz-text-m;
     }
 }

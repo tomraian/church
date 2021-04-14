@@ -1,0 +1,7 @@
+.banner.sermons-page{
+    height: 100vh;
+    padding: 0;
+    .sermons-page-text{
+        @include mid();
+    }
+}

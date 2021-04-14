@@ -78,7 +78,7 @@ $(function() {
 menu();
 
 
-// carousel lib 
+// carousel 
 $('.carousel-wrap').flickity({
     // options
     cellAlign: 'left',
@@ -146,12 +146,14 @@ $('.testimonials__carousel').flickity({
     cellAlign: 'left',
     contain: true,
     wrapAround: true,
-    resize: true
+    prevNextButtons: false,
+    pageDots: false,
 
   });
-
-
-
+$('.testimonials__dot').on( 'click', '.button', function() {
+    var index = $(this).index();
+    $carousel.flickity( 'select', index );
+  });
 
 
 // calendar
