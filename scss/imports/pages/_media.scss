@@ -1,0 +1,111 @@
+.media-video{
+    &__heading,
+    &__desc{
+        text-align: center;
+    }
+    &__heading{
+        font-size: 30px;
+        color: $text-heading-cl;
+        font-weight: $fw-heading-text;
+        padding-top: $pd;
+    }
+    &__desc{
+        padding: 20px 0 30px;
+        font-size: $fz-text-m;
+    }
+    &__thumbnail{
+        position: relative;
+        &--btn{
+            @include mid();
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.2) ;
+            cursor: pointer;
+            i{
+                color: $white-cl;
+                padding: 30px 32px;
+                font-size: 30px;
+                @include mobile{
+                    padding: 15px 16px;
+                    font-size: 15px;
+                }
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                @extend .btn;
+                transform: scale(0);
+                transition: $t;
+                border: 3px solid $primary-cl;
+            }
+            &:hover::after {
+                transform: scale(1);
+                transition: $t;
+            }
+            &:active::after {
+                transform: scale(1);
+                transition: $t;
+            }
+            &:hover, &:hover i{
+                color: $primary-cl;
+                background-color: transparent;
+            }
+        }
+    }
+    &__overlay{
+        @include fullpage();
+        background-color: rgba(255,255,255,0.2);
+        z-index: 100;
+        text-align: center;
+        @include hidden();
+        @include transition($t);
+        &.--active{
+            @include visible();
+        }
+        &--wrap{
+            position: fixed;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%,-80%);
+            height: 80vh;
+            .input-video{
+                height: 100%;
+                @include midflex();
+                iframe{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        &--close{
+            user-select: none;
+            position: absolute;
+            z-index: 110;
+            right: 15px;
+            top: 5px;
+            background-color: $primary-cl;
+            display: none;
+            padding: 5px 10px;
+            @include mobile{
+                display: block;
+            }
+            i{
+                color: $white-cl;
+                font-size: 30px;
+            }
+        }
+    }
+}
+.contact.media{
+    margin-bottom: $pd;
+}
+
+@media screen and (max-width: 425px){
+    .media-video__overlay--wrap{
+        width: 100%;
+        height: 100%;
+    }
+}

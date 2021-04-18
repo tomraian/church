@@ -30,7 +30,7 @@
             @extend .btn;
             // border: transparent;
             transform: scale(0);
-            transition: 0;
+            @include transition($t);
             border: 3px solid $primary-cl;
         }
         &:hover::after {
@@ -60,7 +60,7 @@
             @extend .btn;
             // border: transparent;
             transform: scale(0);
-            transition: 0;
+            @include transition($t);
             border: 3px solid $sub-cl;
         }
         &:hover::after {
@@ -84,7 +84,7 @@
             @include fullpage();
             @extend .btn;
             transform: scale(0);
-            transition: 0;
+            @include transition($t);
         }
         &:hover::after {
             transform: scale(1);
