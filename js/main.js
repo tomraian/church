@@ -156,6 +156,7 @@ $('.testimonials__dot').on( 'click', '.button', function() {
   });
 
 function mediaVideo(){
+<<<<<<< HEAD
     document.querySelector('.media-video__thumbnail--btn').addEventListener('click',function(e){
     document.querySelector('.media-video__overlay').classList.add('--active');
     document.querySelector('body').classList.add('no-scroll');
@@ -164,6 +165,19 @@ function mediaVideo(){
     document.querySelector('.media-video__overlay--close').addEventListener('click',function(){
     document.querySelector('.media-video__overlay').classList.remove('--active');
     document.querySelector('body').classList.remove('no-scroll');
+=======
+    document.querySelector('.media-video__thumbnail--btn').addEventListener('click',function(){
+    document.querySelector('.media-video__overlay').classList.add('--active');
+})
+
+    document.querySelector('.media-video__overlay--close').addEventListener('click',function(){
+    document.querySelector('.media-video__overlay').classList.remove('--active');
+})
+
+}
+
+mediaVideo();
+>>>>>>> f9570d22e0b1a75150f60fe26f469bde0297929c
 
 })
 document.onkeydown = function(evt) {
@@ -235,30 +249,13 @@ generateCalendar = (month, year) => {
     }
 }
 
-let month_list = calendar.querySelector('.month-list')
-
-month_names.forEach((e, index) => {
-    let month = document.createElement('div')
-    month.innerHTML = `<div data-month="${index}">${e}</div>`
-    month.querySelector('div').onclick = () => {
-        month_list.classList.remove('show')
-        curr_month.value = index
-        generateCalendar(index, curr_year.value)
-    }
-    month_list.appendChild(month)
-})
-
-let month_picker = calendar.querySelector('#month-picker')
-
-month_picker.onclick = () => {
-    month_list.classList.add('show')
-}
 
 let currDate = new Date()
 
 let curr_month = {value: currDate.getMonth()}
 let curr_year = {value: currDate.getFullYear()}
 
+<<<<<<< HEAD
 generateCalendar(curr_month.value, curr_year.value)
 
 document.querySelector('#prev-year').onclick = () => {
@@ -271,5 +268,7 @@ document.querySelector('#next-year').onclick = () => {
     generateCalendar(curr_month.value, curr_year.value)
 }
 
+=======
+>>>>>>> f9570d22e0b1a75150f60fe26f469bde0297929c
 }
 calendar();

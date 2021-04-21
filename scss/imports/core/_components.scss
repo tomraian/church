@@ -30,6 +30,10 @@
             @extend .btn;
             // border: transparent;
             transform: scale(0);
+<<<<<<< HEAD
+=======
+            @include transition($t);
+>>>>>>> f9570d22e0b1a75150f60fe26f469bde0297929c
             border: 3px solid $primary-cl;
         }
         &:hover::after {
@@ -59,6 +63,10 @@
             @extend .btn;
             // border: transparent;
             transform: scale(0);
+<<<<<<< HEAD
+=======
+            @include transition($t);
+>>>>>>> f9570d22e0b1a75150f60fe26f469bde0297929c
             border: 3px solid $sub-cl;
         }
         &:hover::after {
@@ -82,6 +90,10 @@
             @include fullpage();
             @extend .btn;
             transform: scale(0);
+<<<<<<< HEAD
+=======
+            @include transition($t);
+>>>>>>> f9570d22e0b1a75150f60fe26f469bde0297929c
         }
         &:hover::after {
             transform: scale(1);

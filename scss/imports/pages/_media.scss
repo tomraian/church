@@ -56,6 +56,7 @@
         }
     }
     &__overlay{
+<<<<<<< HEAD
         @include full-fixed();
         background-color: rgba(255,255,255,0.4);
         z-index: 1000;
@@ -93,6 +94,29 @@
                     position: absolute;
                     top: 0;
                     left: 0;
+=======
+        @include fullpage();
+        background-color: rgba(255,255,255,0.2);
+        z-index: 100;
+        text-align: center;
+        @include hidden();
+        @include transition($t);
+        &.--active{
+            @include visible();
+        }
+        &--wrap{
+            position: fixed;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%,-80%);
+            height: 80vh;
+            .input-video{
+                height: 100%;
+                @include midflex();
+                iframe{
+                    width: 100%;
+                    height: 100%;
+>>>>>>> f9570d22e0b1a75150f60fe26f469bde0297929c
                 }
             }
         }
@@ -100,6 +124,7 @@
             user-select: none;
             position: absolute;
             z-index: 110;
+<<<<<<< HEAD
             right: -10px;
             top: -10px;
             background-color: $primary-cl;
@@ -107,17 +132,38 @@
             width: 30px;
             height: 30px;
             border-radius: 50%;
+=======
+            right: 15px;
+            top: 5px;
+            background-color: $primary-cl;
+            display: none;
+            padding: 5px 10px;
+>>>>>>> f9570d22e0b1a75150f60fe26f469bde0297929c
             @include mobile{
                 display: block;
             }
             i{
                 color: $white-cl;
+<<<<<<< HEAD
                 font-size: 20px;
                 line-height: 30px;
+=======
+                font-size: 30px;
+>>>>>>> f9570d22e0b1a75150f60fe26f469bde0297929c
             }
         }
     }
 }
 .contact.media{
     margin-bottom: $pd;
+<<<<<<< HEAD
+=======
+}
+
+@media screen and (max-width: 425px){
+    .media-video__overlay--wrap{
+        width: 100%;
+        height: 100%;
+    }
+>>>>>>> f9570d22e0b1a75150f60fe26f469bde0297929c
 }
