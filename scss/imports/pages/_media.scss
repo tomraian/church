@@ -67,7 +67,7 @@
         &.--active{
             // @include visible();
             transform: scale(1);
-            transition: all ease 0s;
+            transition: all ease 0.1s;
             pointer-events: unset;
         }
         &--content{
