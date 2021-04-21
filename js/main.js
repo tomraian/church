@@ -155,11 +155,37 @@ $('.testimonials__dot').on( 'click', '.button', function() {
     $carousel.flickity( 'select', index );
   });
 
+function mediaVideo(){
+    document.querySelector('.media-video__thumbnail--btn').addEventListener('click',function(e){
+    document.querySelector('.media-video__overlay').classList.add('--active');
+    document.querySelector('body').classList.add('no-scroll');
+    e.stopPropagation();
+})
+    document.querySelector('.media-video__overlay--close').addEventListener('click',function(){
+    document.querySelector('.media-video__overlay').classList.remove('--active');
+    document.querySelector('body').classList.remove('no-scroll');
+
+})
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+        document.querySelector('.media-video__overlay').classList.remove('--active');
+        document.querySelector('body').classList.remove('no-scroll');
+    }
+};
+document.addEventListener('click', function(e){
+    document.querySelector('.media-video__overlay').classList.remove('--active');
+    document.querySelector('body').classList.remove('no-scroll');
+})
+}
+
+mediaVideo();
+
 
 // calendar
-
 function calendar(){
-    let calendar = document.querySelector('.calendar')
+
+let calendar = document.querySelector('.calendar')
 
 const month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
@@ -245,11 +271,5 @@ document.querySelector('#next-year').onclick = () => {
     generateCalendar(curr_month.value, curr_year.value)
 }
 
-let dark_mode_toggle = document.querySelector('.dark-mode-switch')
-
-dark_mode_toggle.onclick = () => {
-    document.querySelector('body').classList.toggle('light')
-    document.querySelector('body').classList.toggle('dark')
-}
 }
 calendar();

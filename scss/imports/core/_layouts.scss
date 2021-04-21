@@ -21,7 +21,9 @@ body {
     @include tablet {}
     @include mobile {}
 }
-
+body.no-scroll{
+    overflow: hidden;
+}
 .to-top {
     position: fixed;
     right: 20px;

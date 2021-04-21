@@ -1,0 +1,123 @@
+.media-video{
+    &__heading,
+    &__desc{
+        text-align: center;
+    }
+    &__heading{
+        font-size: 30px;
+        color: $text-heading-cl;
+        font-weight: $fw-heading-text;
+        padding-top: $pd;
+    }
+    &__desc{
+        padding: 20px 0 30px;
+        font-size: $fz-text-m;
+    }
+    &__thumbnail{
+        position: relative;
+        &--btn{
+            @include mid();
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.2) ;
+            cursor: pointer;
+            i{
+                color: $white-cl;
+                padding: 30px 32px;
+                font-size: 30px;
+                @include mobile{
+                    padding: 15px 16px;
+                    font-size: 15px;
+                }
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                @extend .btn;
+                transform: scale(0);
+                transition: $t;
+                border: 3px solid $primary-cl;
+            }
+            &:hover::after {
+                transform: scale(1);
+                transition: $t;
+            }
+            &:active::after {
+                transform: scale(1);
+                transition: $t;
+            }
+            &:hover, &:hover i{
+                color: $primary-cl;
+                background-color: transparent;
+            }
+        }
+    }
+    &__overlay{
+        @include full-fixed();
+        background-color: rgba(255,255,255,0.4);
+        z-index: 1000;
+        text-align: center;
+        transform: scale(0);
+        pointer-events: none;
+        transition: all ease 0.2s;
+        // @include hidden();
+        &.--active{
+            // @include visible();
+            transform: scale(1);
+            transition: all ease 0s;
+            pointer-events: unset;
+        }
+        &--content{
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%,-80%);
+            background-color: #333;
+            padding: 10px;
+            width: 80%;
+            @include mobile{
+                width: 90%;
+            }
+            .input-video{
+                width: 100%;
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                background-color: #333;
+                iframe{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+        &--close{
+            user-select: none;
+            position: absolute;
+            z-index: 110;
+            right: -10px;
+            top: -10px;
+            background-color: $primary-cl;
+            display: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            @include mobile{
+                display: block;
+            }
+            i{
+                color: $white-cl;
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+.contact.media{
+    margin-bottom: $pd;
+}
