@@ -156,7 +156,6 @@ $('.testimonials__dot').on( 'click', '.button', function() {
   });
 
 function mediaVideo(){
-<<<<<<< HEAD
     document.querySelector('.media-video__thumbnail--btn').addEventListener('click',function(e){
     document.querySelector('.media-video__overlay').classList.add('--active');
     document.querySelector('body').classList.add('no-scroll');
@@ -165,28 +164,15 @@ function mediaVideo(){
     document.querySelector('.media-video__overlay--close').addEventListener('click',function(){
     document.querySelector('.media-video__overlay').classList.remove('--active');
     document.querySelector('body').classList.remove('no-scroll');
-=======
-    document.querySelector('.media-video__thumbnail--btn').addEventListener('click',function(){
-    document.querySelector('.media-video__overlay').classList.add('--active');
-})
-
-    document.querySelector('.media-video__overlay--close').addEventListener('click',function(){
-    document.querySelector('.media-video__overlay').classList.remove('--active');
-})
-
-}
-
-mediaVideo();
->>>>>>> f9570d22e0b1a75150f60fe26f469bde0297929c
 
 })
-document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    if (evt.keyCode == 27) {
+document.onkeydown = function(e) {
+    e = e || window.event;
+    if (e.keyCode == 27) {
         document.querySelector('.media-video__overlay').classList.remove('--active');
         document.querySelector('body').classList.remove('no-scroll');
     }
-};
+}
 document.addEventListener('click', function(e){
     document.querySelector('.media-video__overlay').classList.remove('--active');
     document.querySelector('body').classList.remove('no-scroll');
@@ -255,7 +241,6 @@ let currDate = new Date()
 let curr_month = {value: currDate.getMonth()}
 let curr_year = {value: currDate.getFullYear()}
 
-<<<<<<< HEAD
 generateCalendar(curr_month.value, curr_year.value)
 
 document.querySelector('#prev-year').onclick = () => {
@@ -268,7 +253,5 @@ document.querySelector('#next-year').onclick = () => {
     generateCalendar(curr_month.value, curr_year.value)
 }
 
-=======
->>>>>>> f9570d22e0b1a75150f60fe26f469bde0297929c
 }
 calendar();
