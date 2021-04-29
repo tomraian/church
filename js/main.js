@@ -148,6 +148,7 @@ $('.testimonials__carousel').flickity({
     wrapAround: true,
     prevNextButtons: false,
     pageDots: false,
+    autoPlay: 2000
 
   });
 $('.testimonials__dot').on( 'click', '.button', function() {
@@ -255,3 +256,19 @@ document.querySelector('#next-year').onclick = () => {
 
 }
 calendar();
+
+
+
+
+function checkCanAccessible() {
+    var isAccessible;
+    var age = 16;
+    
+    if(age < 16){
+        isAccessible = false;
+    }
+    else{
+        isAccessible = true;
+    }
+    console.log(isAccessible);
+}

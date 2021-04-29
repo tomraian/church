@@ -335,11 +335,7 @@
         text-align: center;
         &--heading {
             text-align: center;
-            @include text(110px,
-            'pp',
-            $line-height,
-            $white-cl,
-            uppercase);
+            @include text(100px,'pp',$line-height,$white-cl,uppercase);
             font-weight: $fw-heading-text;
             line-height: 0.9;
             padding-bottom: 30px;
